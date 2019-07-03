@@ -34,8 +34,7 @@ namespace QuizLibrary
                     Console.WriteLine(" \n Correct!\n");
                     Console.ResetColor();
 
-                    //QuestionThree questionThree = new QuestionThree();
-                    //questionThree.Question();
+                    GraphicAtTheEndOfGame.EndTitle();
                 }
                 else if (questionAnswerItems != " No")
                 {

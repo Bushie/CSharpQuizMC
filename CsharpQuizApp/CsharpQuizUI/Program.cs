@@ -9,7 +9,7 @@ namespace CsharpQuizUI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" Quiz will appear soon\n");
+            GraphicAtTheStartOfGame.StartTitle();
 
 
 
