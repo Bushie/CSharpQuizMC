@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsharpQuizUI
+namespace QuizLibrary
 {
-    public class QuestionTwo
+    public class QuestionOne
     {
         private static int index = 0;
 
         public void Question()
         {
-            Console.WriteLine(" Who created C#?\n");
+            Console.WriteLine(" When was C# invented?\n");
 
 
 
             List<string> possibleAnswers = new List<string>()
             {
-                " Guido van Rossum",
-                " Ken Thompson",
-                " James Gosling",
-                " Bjarne Stroustrup",
-                " Anders Hejlsberg"
+                " 1983",
+                " 2002",
+                " 2000",
+                " 1995",
+                " 2012"
 
             };
 
@@ -27,7 +27,7 @@ namespace CsharpQuizUI
             while (true)
             {
                 string questionAnswerItems = QuestionScrollFunctionality(possibleAnswers);
-                if (questionAnswerItems == " Anders Hejlsberg")
+                if (questionAnswerItems == " 2000")
                 {
                     Console.Clear();
 
@@ -35,10 +35,10 @@ namespace CsharpQuizUI
                     Console.WriteLine(" \n Correct!\n");
                     Console.ResetColor();
 
-                    QuestionThree questionThree = new QuestionThree();
-                    questionThree.Question();
+                    QuestionTwo questionTwo = new QuestionTwo();
+                    questionTwo.Question();
                 }
-                else if (questionAnswerItems != " Anders Hejlsberg")
+                else if (questionAnswerItems != " 2000")
                 {
                     Console.Clear();
 
@@ -107,22 +107,5 @@ namespace CsharpQuizUI
             return "";
         }
 
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

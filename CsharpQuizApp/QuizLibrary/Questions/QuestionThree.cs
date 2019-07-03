@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsharpQuizUI
+namespace QuizLibrary
 {
-    public class QuestionOne
+    public class QuestionThree
     {
         private static int index = 0;
 
         public void Question()
         {
-            Console.WriteLine(" When was C# invented?\n");
+            Console.WriteLine(" Is C# a complied language?\n");
 
 
 
             List<string> possibleAnswers = new List<string>()
             {
-                " 1983",
-                " 2002",
-                " 2000",
-                " 1995",
-                " 2012"
+                " No",
+                " Yes",
+                " Dynamic",
+                " OOP",
+                " Hybrid"
 
             };
 
@@ -27,7 +27,7 @@ namespace CsharpQuizUI
             while (true)
             {
                 string questionAnswerItems = QuestionScrollFunctionality(possibleAnswers);
-                if (questionAnswerItems == " 2000")
+                if (questionAnswerItems == " Yes")
                 {
                     Console.Clear();
 
@@ -35,10 +35,10 @@ namespace CsharpQuizUI
                     Console.WriteLine(" \n Correct!\n");
                     Console.ResetColor();
 
-                    QuestionTwo questionTwo = new QuestionTwo();
-                    questionTwo.Question();
+                    QuestionFour questionFour = new QuestionFour();
+                    questionFour.Question();
                 }
-                else if (questionAnswerItems != " 2000")
+                else if (questionAnswerItems != " Yes")
                 {
                     Console.Clear();
 
@@ -53,11 +53,11 @@ namespace CsharpQuizUI
 
         }
 
-    /// <summary>
-    /// Creates scrolling affect
-    /// </summary>
-    /// <param name="items"></param>
-    /// <returns></returns>
+        /// <summary>
+        /// Creates scrolling affect
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public string QuestionScrollFunctionality(List<string> items)
         {
             for (int i = 0; i < items.Count; i++)

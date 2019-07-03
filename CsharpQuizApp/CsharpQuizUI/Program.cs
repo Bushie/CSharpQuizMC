@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using QuizLibrary;
+using System;
+
 
 namespace CsharpQuizUI
 {
@@ -7,6 +10,8 @@ namespace CsharpQuizUI
         static void Main(string[] args)
         {
             Console.WriteLine(" Quiz will appear soon\n");
+
+
 
             QuestionOne questionOne = new QuestionOne();
             questionOne.Question();
@@ -17,7 +22,16 @@ namespace CsharpQuizUI
             QuestionThree questionThree = new QuestionThree();
             questionThree.Question();
 
-           
+            QuestionFour questionFour = new QuestionFour();
+            questionFour.Question();
+
+            QuestionFive questionFive = new QuestionFive();
+            questionFive.Question();
+
+            QuestionSix questionSix = new QuestionSix();
+            questionSix.Question();
+
+
 
             Console.Clear();
 

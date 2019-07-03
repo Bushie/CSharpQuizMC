@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsharpQuizUI
+namespace QuizLibrary
 {
-    public class QuestionThree
+    public class QuestionTwo
     {
         private static int index = 0;
 
         public void Question()
         {
-            Console.WriteLine(" Is C# a complied language?\n");
+            Console.WriteLine(" Who created C#?\n");
 
 
 
             List<string> possibleAnswers = new List<string>()
             {
-                " No",
-                " Yes",
-                " Dynamic",
-                " OOP",
-                " Hybrid"
+                " Guido van Rossum",
+                " Ken Thompson",
+                " James Gosling",
+                " Bjarne Stroustrup",
+                " Anders Hejlsberg"
 
             };
 
@@ -27,7 +27,7 @@ namespace CsharpQuizUI
             while (true)
             {
                 string questionAnswerItems = QuestionScrollFunctionality(possibleAnswers);
-                if (questionAnswerItems == " Yes")
+                if (questionAnswerItems == " Anders Hejlsberg")
                 {
                     Console.Clear();
 
@@ -35,10 +35,10 @@ namespace CsharpQuizUI
                     Console.WriteLine(" \n Correct!\n");
                     Console.ResetColor();
 
-                    //QuestionThree questionThree = new QuestionThree();
-                    //questionThree.Question();
+                    QuestionThree questionThree = new QuestionThree();
+                    questionThree.Question();
                 }
-                else if (questionAnswerItems != " Yes")
+                else if (questionAnswerItems != " Anders Hejlsberg")
                 {
                     Console.Clear();
 
