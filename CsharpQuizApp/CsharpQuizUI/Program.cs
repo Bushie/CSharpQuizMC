@@ -9,9 +9,14 @@ namespace CsharpQuizUI
     {
         static void Main(string[] args)
         {
+            CsharpQuizQuestions();
+
+            Console.ReadLine();
+        }
+
+        private static void CsharpQuizQuestions()
+        {
             GraphicAtTheStartOfGame.StartTitle();
-
-
 
             QuestionOne questionOne = new QuestionOne();
             questionOne.Question();
@@ -31,11 +36,11 @@ namespace CsharpQuizUI
             QuestionSix questionSix = new QuestionSix();
             questionSix.Question();
 
-
-
             Console.Clear();
-
-            Console.ReadLine();
         }
     }
 }
+
+
+
+
