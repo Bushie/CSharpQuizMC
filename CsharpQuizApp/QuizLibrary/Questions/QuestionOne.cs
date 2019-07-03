@@ -9,7 +9,8 @@ namespace QuizLibrary
 
         public void Question()
         {
-            Console.WriteLine(" When was C# invented?\n");
+            string question = " 1. When was C# invented?\n";
+            Console.WriteLine(question);
 
 
 
@@ -43,7 +44,10 @@ namespace QuizLibrary
                     Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(" \n Wrong answer\n");
+                    Console.Write(" \n Wrong answer");
+                    Console.Write(" \n Select another choice, then press enter\n\n");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(question);
                     Console.ResetColor();
 
 

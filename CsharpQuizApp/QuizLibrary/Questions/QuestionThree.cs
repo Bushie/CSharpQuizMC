@@ -9,7 +9,8 @@ namespace QuizLibrary
 
         public void Question()
         {
-            Console.WriteLine(" Is C# a complied language?\n");
+            string question = " 3. Is C# a complied language?\n";
+            Console.WriteLine(question);
 
 
 
@@ -43,9 +44,11 @@ namespace QuizLibrary
                     Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(" \n Wrong answer\n");
+                    Console.Write(" \n Wrong answer");
+                    Console.Write(" \n Select another choice, then press enter\n\n");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(question);
                     Console.ResetColor();
-
 
                 }
 

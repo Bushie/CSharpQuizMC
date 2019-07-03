@@ -9,7 +9,8 @@ namespace QuizLibrary
 
         public void Question()
         {
-            Console.WriteLine("  Is method overloading just another name for method overriding?\n");
+            string question = " 5. Is method overloading just another name for method overriding?\n";
+            Console.WriteLine(question);
 
 
 
@@ -43,8 +44,12 @@ namespace QuizLibrary
                     Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(" \n Wrong answer\n");
+                    Console.Write(" \n Wrong answer");
+                    Console.Write(" \n Select another choice, then press enter\n\n");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(question);
                     Console.ResetColor();
+
 
 
                 }

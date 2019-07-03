@@ -9,7 +9,8 @@ namespace QuizLibrary
 
         public void Question()
         {
-            Console.WriteLine(" Does C# have global variables?\n");
+            string question = " 6. Does C# have global variables?\n";
+            Console.WriteLine(question);
 
 
 
@@ -41,7 +42,10 @@ namespace QuizLibrary
                     Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(" \n Wrong answer\n");
+                    Console.Write(" \n Wrong answer");
+                    Console.Write(" \n Select another choice, then press enter\n\n");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(question);
                     Console.ResetColor();
 
 
