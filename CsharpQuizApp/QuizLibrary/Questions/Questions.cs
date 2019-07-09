@@ -1,45 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace QuizLibrary
+namespace QuizLibrary.Questions
 {
-    public class QuestionThree
+    public class Question
     {
-        private static int index = 0;
+        public string QuestionText { get; set; }
+        public List<string> Answers { get; set; }
+        public string CorrectAnswer { get; set; }
 
-        public void Question()
+        private int index = 0;
+
+        public void Show()
         {
-            string question = " 3. Is C# a complied language?\n";
-            Console.WriteLine(question);
-
-
-
-            List<string> possibleAnswers = new List<string>()
-            {
-                " No",
-                " Yes",
-                " Dynamic",
-                " OOP",
-                " Hybrid"
-
-            };
+            Console.WriteLine(QuestionText);
 
             Console.CursorVisible = false;
             while (true)
             {
-                string questionAnswerItems = QuestionScrollFunctionality(possibleAnswers);
-                if (questionAnswerItems == " Yes")
+                string questionAnswerItems = QuestionScrollFunctionality(Answers);
+                if (questionAnswerItems == CorrectAnswer)
                 {
                     Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(" \n Correct!\n");
                     Console.ResetColor();
-
-                    QuestionFour questionFour = new QuestionFour();
-                    questionFour.Question();
+                    break;
                 }
-                else if (questionAnswerItems != " Yes")
+                else if (questionAnswerItems != CorrectAnswer)
                 {
                     Console.Clear();
 
@@ -47,13 +37,10 @@ namespace QuizLibrary
                     Console.Write(" \n Wrong answer");
                     Console.Write(" \n Select another choice, then press enter\n\n");
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine(question);
+                    Console.WriteLine(QuestionText);
                     Console.ResetColor();
-
                 }
-
             }
-
         }
 
         /// <summary>
@@ -110,22 +97,5 @@ namespace QuizLibrary
             return "";
         }
 
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
